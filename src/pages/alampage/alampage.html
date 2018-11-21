@@ -1,0 +1,53 @@
+<!--
+  Generated template for the AlampagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="title_main">
+
+    <ion-navbar>
+        <ion-title>
+            <img src="assets/imgs/logo.png" alt=""> Set Alarm</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="inner_bg">
+
+    <ion-item class="tongle_btn">
+        <ion-label> Set Your Alarm</ion-label>
+        <ion-toggle [(ngModel)]="alam.alam_on"></ion-toggle>
+    </ion-item>
+
+    <ion-item class="time_style">
+        <ion-label *ngIf="!alam.alam_time">Select Time</ion-label>
+        <ion-datetime [(ngModel)]="alam.alam_time" displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
+    </ion-item>
+
+    <ion-item class="time_style">
+        <ion-label>Repeat</ion-label>
+        <ion-checkbox [(ngModel)]="alam.is_repeat" (click)="repeatReset()"></ion-checkbox>
+    </ion-item>
+
+
+    <ion-item class="time_style" *ngIf="alam.is_repeat">
+        <button ion-button round clear class="alam" (click)="insertArr('S',1)" [ngClass]="{'alam_clear' : alam.alam_repeat[1] != 'S'}">S </button>
+        <button ion-button round clear class="alam" (click)="insertArr('M',2)" [ngClass]="{'alam_clear' : alam.alam_repeat[2] != 'M'}">M </button>
+        <button ion-button round clear class="alam" (click)="insertArr('T',3)" [ngClass]="{'alam_clear' : alam.alam_repeat[3] != 'T'}">T </button>
+        <button ion-button round clear class="alam" (click)="insertArr('W',4)" [ngClass]="{'alam_clear' : alam.alam_repeat[4] != 'W'}">W </button>
+        <button ion-button round clear class="alam" (click)="insertArr('TH',5)" [ngClass]="{'alam_clear' : alam.alam_repeat[5] != 'TH'}">T </button>
+        <button ion-button round clear class="alam" (click)="insertArr('F',6)" [ngClass]="{'alam_clear' : alam.alam_repeat[6] != 'F'}">F</button>
+        <button ion-button round clear class="alam" (click)="insertArr('SA',7)" [ngClass]="{'alam_clear' : alam.alam_repeat[7] != 'SA'}">SA </button>
+
+    </ion-item>
+
+
+    <div padding>
+        <button class="btnteme" ion-button block (click)="saveAlam()">SAVE</button>
+
+
+    </div>
+
+</ion-content>

@@ -1,0 +1,120 @@
+<ion-header class="title_main">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <img src="assets/imgs/logo.png" alt=""> {{groupDetails.group_name}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content #content padding class="inner_bg">
+
+
+
+
+    <ion-list *ngFor="let chatlist of chat">
+
+        <ion-item class="work_list" *ngIf="chatlist.member_id != userdetails.member_id && chatlist.type == 'text'">
+            <ion-avatar item-start>
+                <img *ngIf="chatlist.image" src="{{chatlist.image}}">
+                <img *ngIf="!chatlist.image" src="assets/imgs/profile_bg.jpg">
+            </ion-avatar>
+            <div class="work_list_out">{{chatlist.message}}</div>
+            <h5 class="bwrds">{{chatlist.message_from}} {{chatlist.timeInsec}}</h5>
+
+        </ion-item>
+
+
+
+        <ion-item class="work_list_rte" *ngIf="chatlist.member_id == userdetails.member_id && chatlist.type == 'text'">
+
+            <div class="work_list_img">
+                <div>{{chatlist.message}}</div>
+            </div>
+            <h5 class="bwrds">{{chatlist.message_from}} {{chatlist.timeInsec}}</h5>
+            <ion-avatar item-end>
+                <img *ngIf="chatlist.image" src="{{chatlist.image}}">
+                <img *ngIf="!chatlist.image" src="assets/imgs/profile_bg.jpg">
+            </ion-avatar>
+        </ion-item>
+
+
+        <ion-item class="work_list_rte" *ngIf="chatlist.type == 'image'">
+
+            <div class="work_list_img">
+                <div class="img_pos">
+                    <img imageViewer src="{{chatlist.media_url}}">
+                </div>
+                <div [ngClass]="{'videoMsdOther' : chatlist.member_id != userdetails.member_id}">
+                    <p class="lngtext">{{chatlist.message}}</p></div>
+            </div>
+            <h5 class="bwrds">{{chatlist.message_from}} {{chatlist.timeInsec}}</h5>
+            <ion-avatar item-end *ngIf="chatlist.member_id == userdetails.member_id">
+                <img *ngIf="chatlist.image" src="{{chatlist.image}}">
+                <img *ngIf="!chatlist.image" src="assets/imgs/profile_bg.jpg">
+            </ion-avatar>
+            <ion-avatar item-start *ngIf="chatlist.member_id != userdetails.member_id">
+                <img *ngIf="chatlist.image" src="{{chatlist.image}}">
+                <img *ngIf="!chatlist.image" src="assets/imgs/profile_bg.jpg">
+            </ion-avatar>
+        </ion-item>
+
+
+
+        <ion-item class="work_list_rte" *ngIf="chatlist.type == 'video'">
+
+            <div class="work_list_blok img_pos" *ngIf="chatlist.play == 0" (click)="playVideo(chatlist.media_url)">
+
+
+                <div class="bg_gray img_pos">
+                    <img style=" z-index: 100000;
+                    width: 54px;" src="assets/imgs/play.png" class="pos">
+                </div>
+                <img src="{{chatlist.thumb_nail}}">
+
+
+            </div>
+            <!-- <div class="work_list_blok " *ngIf="chatlist.play == 1">
+                <video style="width: 100%; height: auto; max-height: 200px;" autoplay id="video1" controls="controls" preload="metadata"
+                    webkit-playsinline="webkit-playsinline" class="videoPlayer" controlsList="nodownload">
+                    <source src="{{chatlist.media_url}}" type="video/mp4" />
+                </video>
+
+            </div> -->
+            <div class="videoMsd" [ngClass]="{'videoMsdOther' : chatlist.member_id != userdetails.member_id}">   <p class="lngtext">{{chatlist.message}}</p>      </div>
+            <h5 class="bwrds">{{chatlist.timeInsec}} </h5>
+            <ion-avatar item-end *ngIf="chatlist.member_id == userdetails.member_id">
+                <img *ngIf="chatlist.image" src="{{chatlist.image}}">
+                <img *ngIf="!chatlist.image" src="assets/imgs/profile_bg.jpg">
+            </ion-avatar>
+            <ion-avatar item-start *ngIf="chatlist.member_id != userdetails.member_id">
+                <img *ngIf="chatlist.image" src="{{chatlist.image}}">
+                <img *ngIf="!chatlist.image" src="assets/imgs/profile_bg.jpg">
+            </ion-avatar>
+        </ion-item>
+
+
+    </ion-list>
+
+
+
+
+
+
+
+</ion-content>
+
+
+<ion-footer keyboard-attach="" class="bar-stable item-input-inset bar bar-footer">
+    <label class="item-input-wrapper">
+        <input placeholder="Type your message" [(ngModel)]="mesgArray.message" type="text" class="msg_input">
+    </label>
+    <button class="button button-clear btn_snd" (click)="takePic()">
+        <ion-icon name="ios-attach-outline"></ion-icon>
+    </button>
+    <button class="button button-clear btn_snd" (click)="sendMessage()">
+        <ion-icon name="ios-send"></ion-icon>
+    </button>
+</ion-footer>

@@ -1,0 +1,92 @@
+<ion-header class="title_main">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <img src="assets/imgs/logo.png" alt="">
+        </ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="inner_bg">
+
+
+
+
+    <ion-list>
+        <ion-item center style="background: none!important; border: none!important" text-center>
+            <p class="fnt">Today’s Progress</p>
+            <!-- <div class="progress-circle p80">
+                <span>12%</span>
+                <div class="left-half-clipper">
+                    <div class="first80-bar"></div>
+                    <div class="value-bar"></div>
+                </div>
+            </div> -->
+
+            <div class="r_out">
+                <svg viewBox="0 0 36 36">
+                    <path d="M18 2.0845
+                                                     a 15.9155 15.9155 0 0 1 0 31.831
+                                                     a 15.9155 15.9155 0 0 1 0 -31.831" fill="#fff" stroke="#626466" stroke-width="3"
+                        stroke-dasharray="100, 100"></path>
+                    <path d="M18 2.0845
+                                                       a 15.9155 15.9155 0 0 1 0 31.831
+                                                       a 15.9155 15.9155 0 0 1 0 -31.831" fill="transparent" stroke="#eeae24"
+                        stroke-width="3" [attr.stroke-dasharray]="goal.progress_range *10 +', 100'"></path>
+                </svg>
+                <span class="spanstyle">{{goal.progress_range *10}}%</span>
+            </div>
+        </ion-item>
+
+
+
+    </ion-list>
+
+
+    <ion-item class="item_style_top">
+
+        <h2 class="i_label">{{goal.title}}</h2>
+    </ion-item>
+
+
+    <ion-item class="item_style_btm">
+
+        <ion-label stacked style="margin-bottom: 5px; color: #fff;">Edit Goal </ion-label>
+        <ion-input type="text" class="inp_style" [(ngModel)]="goal.title"> </ion-input>
+
+
+    </ion-item>
+
+
+    <ion-list class="item_style">
+
+        <ion-list class="fnt_style">Rate your progress aginst your goal.</ion-list>
+        <ion-item class="rate">
+
+            <ion-range range-has-pin pin="true" value="upper" min="0" max="10" [(ngModel)]="goal.progress_range" (ionChange)="change()">
+                
+            </ion-range>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-item class="item_style_top" style="margin-top: 14px;" >
+
+        <h2 class="i_label">Description</h2>
+
+    </ion-item>
+    <ion-item class="item_style_btm">
+        <ion-textarea rows="4" [(ngModel)]="goal.description" placeholder="Description"></ion-textarea>
+    </ion-item>
+
+
+
+    <div padding>
+        <button (click)="addGoal()" class="btnteme" ion-button block>SAVE</button>
+    </div>
+
+
+</ion-content>

@@ -1,0 +1,208 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+    font-family: 'OxygenRegular';
+    src: url('../../assets/fonts/OxygenRegular.eot');
+    src: url('../../assets/fonts/OxygenRegular.eot') format('embedded-opentype'), url('../../assets/fonts/OxygenRegular.woff2') format('woff2'), url('../../assets/fonts/OxygenRegular.woff') format('woff'), url('../../assets/fonts/OxygenRegular.ttf') format('truetype'), url('../../assets/fonts/OxygenRegular.svg#OxygenRegular') format('svg');
+}
+
+* {
+    font-family: 'OxygenRegular';
+}
+
+$themecolor: #eeae24;
+$theme-bg: #0d0e10;
+$white: #fff;
+@mixin border-radius($radius:8px) {
+    border-radius: $radius;
+}
+
+@mixin font-size($size:1.2rem) {
+    font-size: $size;
+}
+
+.button-md:hover:not(.disable-hover) {
+    background-color: #cb9113;
+}
+
+.button-ios.activated {
+    background-color: #cb9113;
+}
+.toggle-md .toggle-inner{ background-color: #fff!important}
+.time_style{
+    color: #fff; background-color: transparent; 
+}
+.card_style{background: transparent!important; padding: 0px;color:#fff; text-align: center;}
+.card_style .item{background: transparent!important;}
+.card_style .item h2{color:#fff;}
+.card_style .item p{color:#fff;}
+.lst_class{padding-left:10px;padding-bottom: 0px!important; margin-bottom: 0px!important;}
+ 
+.inf_side{border-radius:80px; width:85px; height:85px;   }
+.p_style{font-size: 11px!important;  color: #fff!important; white-space: normal!important; margin-top: 5px!important;}
+.cus_style{background: transparent!important;}
+.cus_style .item{background: transparent!important; color: #fff; border: none!important; padding: 12px;}
+.cus_stylemain .list .item-block .item-inner {
+    border-bottom: 1px solid #2e2e2e!important;
+}
+
+.cus_stylemain .item.item-block .item-inner {
+    padding-right: 0px;
+    border-bottom: 1px solid #2e2e2e!important;
+}
+/////////////////////////// bibin ///////////////////////
+
+.picker-md .picker-prefix, .picker-md .picker-suffix, .picker-md .picker-opt.picker-opt-selected {
+    color: #eeae24!important;
+}
+
+.picker-md .picker-button, .picker-md .picker-button.activated {
+   
+    color: #eeae24!important;
+   
+}
+
+.toggle-md.toggle-checked .toggle-inner {
+    background-color: #eeae24!important;
+}
+
+.alert-md .alert-button {
+    color: #eeae24!important;
+    height: 15px!important;
+}
+.alert-md .alert-sub-title {
+    font-size: 14px!important;
+}
+.alert-md [aria-checked=true] .alert-radio-label {
+    color: #eeae24!important;
+}
+.alert-md [aria-checked=true] .alert-radio-icon {
+    border-color: #eeae24!important;
+}
+.alert-md .alert-radio-inner {
+ 
+    background-color: #eeae24!important;
+}
+.alert-md .alert-wrapper {
+    border-radius: 18px!important;
+    overflow: auto;
+    width: auto;
+    height: auto;
+    left: auto;
+    top: auto;
+    contain: content;
+    max-width: 70%;
+    max-height: 70%;
+}
+.alert-md [aria-checked=true] .alert-checkbox-icon {
+    border-color: #eeae24!important;
+    background-color: #eeae24!important;
+}
+.radio-md .radio-checked {
+    border-color: #eeae24!important;
+}
+.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: transparent;
+    -webkit-box-shadow: inset 0 -1px 0 0 #faf9f8;
+    box-shadow: transparent;
+
+  
+
+}
+.radio-md .radio-inner {
+    background-color: #eeae24;
+}
+.inputudr{
+    &:after{
+     content: '';
+     display: block;
+     width: 0;
+     height: 4px;
+     background: #eeae24;
+     -webkit-transition: width .9s!important;
+     transition: width .9s!important;
+     position: absolute;
+     bottom: -1px;
+    }
+    &.item-input-has-focus{
+        &:after{
+            width: 100%;
+        }
+    }
+ }
+ .loading-md .loading-wrapper {
+    border-radius: 12px!important;
+    background: transparent!important;
+  }
+
+.loading-content{
+    
+    img{
+        width: 34%;
+        margin: 0 auto;
+        display: inherit;
+        background: #eeae24;
+        border-radius: 50%;
+    }
+}
+// .gifloader{
+//     margin-left: 86%;
+// }
+.custom-spinner-box{
+    text-align: center !important;
+}
+.msgErr{
+    color: red;
+  }
+  .toast-md .toast-message {
+    background-color: #eeae24;
+ }
+
+ .list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child {
+    border-bottom-color: transparent !important;
+    -webkit-box-shadow: inset 0 -1px 0 0 transparent!important;
+    box-shadow: inset 0 -1px 0 0 transparent!important;
+}
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border-bottom-color: transparent!important;
+    -webkit-box-shadow: inset 0 -1px 0 0 transparent!important;
+    box-shadow: inset 0 -1px 0 0 transparent!important;
+}
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: transparent!important;
+    -webkit-box-shadow: inset 0 -1px 0 0 transparent!important;
+    box-shadow: inset 0 -1px 0 0 transparent!important;
+}
+.range-md .range-pin::before {
+    
+      background: #eeae24!important;
+   
+  }
+
+  .range-md .range-pin{ background: #eeae24!important;}
+
+  .button-md.activated {
+    background-color: #eeae24;
+   
+}
+.checkbox-md .checkbox-checked {
+    border-color: #eeae24;
+    background-color: #eeae24;
+}
+.back-button-icon-md {
+    color: #fff!important;
+}
+
+////////////////////////////////////////////////////////

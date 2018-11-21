@@ -1,0 +1,23 @@
+page-reset-2 {
+    .logo_login {
+        text-align: center;
+        img {
+            width: 15vh;
+            margin-top: 10vh;
+        }
+    }
+    .label_header {
+        text-align: center;
+        color: #fff;
+        font-size: 2.4rem;
+        span {
+            font-size: 1.6rem !important;
+        }
+    }
+    .toolbar-background {
+        background-color: transparent;
+    }
+    .back-button {
+        color: $white;
+    }
+}

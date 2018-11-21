@@ -1,0 +1,24 @@
+page-addappointment {
+    .back-button {
+        color: $white;
+    }
+    .text-input {
+        text-align: left !important;
+        padding-left: 15px !important;
+    }
+    .back-button-text {
+        display: none;
+    }
+    .datetime {
+        padding: 16px 15px !important;
+    }
+    .select {
+        padding-right: 6px !important;
+        max-width: inherit !important;
+        width: 100%;
+        padding: 0;
+        &.ng-untouched {
+            width: inherit !important;
+        }
+    }
+}

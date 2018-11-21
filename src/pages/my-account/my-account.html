@@ -1,0 +1,59 @@
+<ion-header class="title_main">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <img src="assets/imgs/logo.png" alt=""> MY ACCOUNT</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="inner_bg">
+
+
+
+
+  <ion-list>
+
+
+    <ion-card class="crd_bg">
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img *ngIf="!userData.image" src="assets/imgs/profile_bg.jpg">
+          <img *ngIf="userData.image" src="{{userData.image}}">
+        </ion-avatar>
+        <h2>{{userData.first_name}} {{userData.last_name}}</h2>
+        <p>{{userData.address}}</p>
+      </ion-item>
+
+    </ion-card>
+
+    <button ion-item class="btn_sty_top" (click)="editProfile()">
+      <ion-icon name="ios-person-outline" item-start></ion-icon>
+      Edit Profile
+    </button>
+
+
+    <button ion-item class="btn_sty" (click)="ProfileInfo()">
+      <ion-icon name="ios-person-add-outline" item-start></ion-icon>
+      My Profile
+    </button>
+
+    <button ion-item class="btn_sty" (click)="editHealthInfo()">
+      <ion-icon name="ios-pulse-outline" item-start></ion-icon>
+      Edit Health Information
+    </button>
+    <button ion-item class="btn_sty" (click)="Subscription()">
+      <ion-icon name="ios-cash-outline" item-start></ion-icon>
+      Subscription
+    </button>
+
+    <button ion-item class="btn_sty" (click)="changePassword()">
+      <ion-icon name="ios-lock-outline" item-start></ion-icon>
+      Change Password
+    </button>
+
+  </ion-list>
+</ion-content>

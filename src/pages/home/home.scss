@@ -1,0 +1,177 @@
+page-home {
+
+    
+
+    .segment {
+        background-color: $theme-bg;
+        .segment-button {
+            color: $white;
+            text-transform: none;
+            border: none;
+            &.segment-activated {
+                border-color: $themecolor;
+                background-color: transparent;
+                border-bottom: 3px solid $themecolor;
+            }
+        }
+    }
+    .btn_row {
+        text-align: center;
+        h4 {
+            color: $white;
+            @include font-size(2rem);
+        }
+        .button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            color: $white;
+            font-weight: bold;
+            overflow: inherit;
+            @include font-size(1.4rem);
+            position: relative;
+            &.bad {
+                background-color: #ef2131;
+                border: 6px solid #b81720;
+            }
+            &.good {
+                background-color: #61a73a;
+                border: 6px solid #569835;
+            }
+            ion-icon {
+                @include font-size(4rem);
+                position: absolute;
+                top: -3px;
+                right: 4px;
+                display: none;
+            }
+            &.checked {
+                ion-icon {
+                    display: block;
+                }
+            }
+        }
+    }
+    .rate {
+        background-color: transparent !important;
+        color: $white;
+        border-bottom: none;
+        .item-inner {
+            border-bottom: none !important;
+        }
+        &:last-child {
+            border-bottom: none !important;
+        }
+        .range-bar-active {
+            background: $themecolor;
+        }
+        .range-knob {
+            width: 28px !important;
+            height: 28px !important;
+            background: $white;
+            left: 7px;
+            top: 7px;
+        }
+    }
+    .btn_white {
+        background-color: #fff;
+        color: #424242;
+        height: 8vh;
+        font-weight: bold;
+    }
+    .work_list {
+        background-color: transparent;
+        border-color: #303030 !important;
+        padding-left: 0 !important;
+        border-bottom: 1px solid #303030;
+        padding: 10px 0;
+        .label {
+            color: $white;
+        }
+        .button {
+            height: 50px;
+            background-color: transparent;
+            &:hover {
+                background-color: transparent;
+            }
+            img {
+                width: 40px;
+            }
+        }
+        .item-inner {
+            padding-right: 0 !important;
+            border-bottom: none !important;
+            .btn_alam {
+                margin-right: 0;
+                padding-right: 0;
+            }
+            h6 {
+                color: $white;
+                @include font-size();
+                span {
+                    padding-left: 10px;
+                    position: relative;
+                    padding-right: 10px;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 6px;
+                        left: 0px;
+                        width: 5px;
+                        height: 5px;
+                        background-color: #6b6b6b;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            p {
+                color: $white;
+                ion-icon {
+                    color: #606060;
+                    &.active {
+                        color: $themecolor;
+                    }
+                }
+            }
+        }
+    }
+    .fab_add {
+        .fab {
+            background-color: $themecolor;
+            color: $white;
+        }
+    }
+}
+
+.r_div{width: 75%; float: left;}
+.work_list .label-md{margin: 0px!important; padding: 0px!important}
+.work_list {padding: 0px!important}
+.btn_pos{display: inline-block;}
+.tik_btn_active{
+    z-index: 10;
+    position: relative;
+    /* background-color: #fff; */
+    left:62px;
+    top: -27px;
+    color: transparent;
+    font-size: 30px;}
+
+
+    .tik_btn{
+        z-index: 10;
+        position: relative;
+        /* background-color: #fff; */
+        left: 89px;
+        top: -27px;
+        color: #fff;
+        font-size: 30px;}
+        .bg_pick{background-color: rgba(173, 173, 173, 0.3);
+            color: #fff !important; border-radius: 4px}
+        .main_blk{display: flex;}
+        h5{color: #fff; font-size:12px}
+        .item-cover{color: #fff;}
+        .datetime {
+            padding: 8px 8px 8px 8px;
+        }
+        .progred{border: 1px solid #eeae24;background-color:#eeae24;  color: #333333; border-radius: 80px; margin-left: 10px; padding: 5px 10px; font-size:12px; padding:0px 5px }
+        

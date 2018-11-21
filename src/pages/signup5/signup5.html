@@ -1,0 +1,217 @@
+<!--
+  Generated template for the Signup5Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding class="bg_main">
+    <br>
+    <div class="boxheader" text-center>
+        <h4>COMPLETE PROFILE</h4>
+        <button ion-button disabled round color="light" outline>Your Risk Factors</button>
+    </div>
+    <br>
+
+
+    <ion-list radio-group [(ngModel)]="complaint.pains">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Do you have pain in your chest during strenuous activity or exercise?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio  item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="complaint.shortness_of_breath">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Have you, at anytime in the last 12 months, had shortness of breath that came on during the day when you were not doing anything strenuous?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="complaint.dizziness">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Do you feel faint or have spells of severe dizziness, particularly with excerise?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="complaint.attack_of_shortness">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Have you, had shortness of breath that came on after you stopped excercising, at anytime in the last 12 months?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="complaint.woken_at_night">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Have you at anytime in the last 12 months been woken at night by an attack of shortness of breath?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="complaint.swelling_accumulation">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Do you experience swelling or accumulation of fluid in the ankles?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="complaint.heart_beating_faster">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Do you get feeling that your heart is beating faster, racing or skipping beats either at rest or during excercise?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="complaint.pains_in_calves">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Do you regularly get pains in your calves and lower legs during exercise, which are not due to soreness or stiffness?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="complaint.fatigue">
+        <ion-row class="row_chklist">
+            <ion-col col-6>
+                <p>Do you experience fatigue when you are not doing anything strenuous, or when you are not doing anything at all?</p>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio item-left checked="false" value="Yes"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-3 no-padding>
+                <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio item-left checked="false" value="No"></ion-radio>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+
+    <div class="row_btn">
+        <ion-row>
+            <ion-col>
+                <button ion-button="bar-button" (click)="goBack()" class="btn_round" round ion-button block>
+                  <ion-icon name="ios-arrow-round-back-outline"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col>
+                <div class="pagination">
+                    6/7
+                </div>
+            </ion-col>
+            <ion-col>
+                <button (click)="signup6()" class="btn_round" round ion-button block>
+                  <ion-icon name="ios-arrow-round-forward-outline"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </div>
+
+</ion-content>

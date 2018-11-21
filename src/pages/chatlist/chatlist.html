@@ -1,0 +1,30 @@
+<ion-header class="title_main">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <img src="assets/imgs/logo.png" alt=""> Message</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="inner_bg">
+
+
+
+
+    <ion-list>
+
+        <ion-item class="work_list" *ngFor="let chat of chat_list; let i = index" (click)="messageDetails(chat.group_id , i ,chat.group_name)">
+            <ion-avatar item-start class="boun_gray">
+                {{getFirstLetter(chat.group_name)}}
+            </ion-avatar>
+            <h2>{{chat.group_name}}</h2>
+            <h5 class="secnd">{{chat.total_member}} People</h5>
+            <button ion-button class="btn_num" clear item-end *ngIf="chat.unread">{{chat.unread}}</button>
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,78 @@
+<ion-header class="title_main">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <img src="assets/imgs/logo.png" alt=""></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="inner_bg">
+
+
+    <ion-item class="cal_bg">
+
+        <ion-calendar #calendar [events]="currentEvents" (onDaySelect)="onDaySelect($event)" (onMonthSelect)="onMonthSelect($event)"></ion-calendar>
+
+    </ion-item>
+
+    <ion-list *ngFor="let list of tempArr; let i = index">
+
+        <ion-item-sliding #item class="block_calender">
+            <ion-item>
+                <h3 class="liddate" item-start>
+                    {{list.new_day}}
+                    <br>
+                    <span>{{list.month_day}} {{list.date}}</span>
+                </h3>
+                <h2>{{list.workout_details}}</h2>
+                <p>{{list.new_time}}</p>
+            </ion-item>
+            <!-- <ion-item-options side="right">
+                <button ion-button class="btnslide" (click)="deleteEvents()">
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+            </ion-item-options> -->
+        </ion-item-sliding>
+    </ion-list>
+
+
+
+    <!-- <ion-list>
+        <ion-item-sliding #item>
+            <ion-item>
+                Item
+            </ion-item>
+            <ion-item-options side="left">
+                <button ion-button (click)="favorite(item)">Favorite</button>
+                <button ion-button color="danger" (click)="share(item)">Share</button>
+            </ion-item-options>
+
+            <ion-item-options side="right">
+                <button ion-button (click)="unread(item)">Unread</button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list> -->
+
+
+
+<!-- 
+    <ion-fab bottom right class="fab_add">
+
+       
+
+        <button ion-fab (click)="forTest()">
+            <ion-icon name="md-add"></ion-icon>
+        </button>
+        <button ion-fab (click)="forTest2()">
+            <ion-icon name="md-add"></ion-icon>
+        </button>
+        
+        <button ion-fab (click)="forTest1()">
+            <ion-icon name="md-add"></ion-icon>
+        </button>
+    </ion-fab> -->
+
+</ion-content>

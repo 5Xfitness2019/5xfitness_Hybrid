@@ -1,0 +1,54 @@
+page-signup8 {
+    .boxheader {
+        h4 {
+            color: $white;
+        }
+        .button {
+            border-color: $themecolor;
+            font-weight: bold;
+            min-width: 200px;
+            opacity: 1 !important;
+            color: $white;
+            text-transform: none;
+            font-weight: normal;
+        }
+    }
+    .row_btn {
+        align-items: center;
+        .button {
+            margin: 0 auto;
+        }
+    }
+    .img_row {
+        text-align: center;
+    }
+    .selectwp {
+        text-align: center;
+        h4 {
+            color: $white;
+            @include font-size();
+            text-align: center;
+        }
+        .btn_select {
+            width: 60px;
+            height: 60px;
+            color: $white;
+            background-color: transparent;
+            border: 2px solid $white;
+            border-radius: 50%;
+            padding: 0;
+            @include font-size(2.6rem);
+            &.btn_selected {
+                background-color: $white;
+                color: #000;
+            }
+        }
+    }
+    .btn_submit {
+        background-color: $themecolor;
+        color: $white;
+        height: 50px;
+        font-weight: bold;
+        margin-top: 10px !important;
+    }
+}

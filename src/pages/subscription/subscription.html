@@ -1,0 +1,82 @@
+<!--
+  Generated template for the Signup7Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="title_main">
+  <ion-navbar>
+      <ion-title>
+          <img src="assets/imgs/logo.png" alt="">SUBSCRIPTION</ion-title>
+     
+   
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="bg_main">
+  <br>
+  <div class="boxheader" text-center>
+    
+    <button ion-button disabled round color="light" outline>CHOOSE PLAN</button>
+  </div>
+  <br>
+
+  <ion-card class="subscription_list">
+    <ion-item>
+      <h2>Monthly Plan</h2>
+      <p>$24.99 
+
+
+      </p>
+      <button class="btn_select" ion-button (click)="subscribeNewProduct('5xfitness_monthlyplan')" *ngIf="currentSubscription.indexOf('5xfitness_yearlyplan') == -1 && currentSubscription.indexOf('5xfitness_lifetimeplan') == -1 && 
+          currentSubscription.indexOf('5xfitness_monthlyplan') == -1 ">SELECT</button>
+      <ion-icon *ngIf="currentSubscription.indexOf('5xfitness_monthlyplan') > -1" item-end name="md-checkmark-circle"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="subscription_list">
+    <ion-item>
+      <h2>Yearly Plan</h2>
+      <p>$299.99</p>
+      <button class="btn_select" ion-button (click)="subscribeNewProduct('5xfitness_yearlyplan')" *ngIf="currentSubscription.indexOf('5xfitness_yearlyplan') == -1 && currentSubscription.indexOf('5xfitness_lifetimeplan') == -1">
+        SELECT</button>
+      <ion-icon *ngIf="currentSubscription.indexOf('5xfitness_yearlyplan') > -1" item-end name="md-checkmark-circle"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="subscription_list">
+    <ion-item>
+      <h2>Life Time Plan</h2>
+      <p>$399.99</p>
+      <button class="btn_select" ion-button (click)="subscribeNewProduct('5xfitness_lifetimeplan')" *ngIf="currentSubscription.indexOf('5xfitness_lifetimeplan') == -1">SELECT</button>
+      <ion-icon *ngIf="currentSubscription.indexOf('5xfitness_lifetimeplan') > -1" item-end name="md-checkmark-circle"></ion-icon>
+    </ion-item>
+  </ion-card>
+    <div class="add-list">
+      <h2>DISCLAIMER</h2>
+      <ul>
+        <li>Payment will be charged to Play Store Account at confirmation of purchase</li>
+        <li>Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period</li>
+        <li> Account will be charged for renewal within 24-hours prior to the end of the current period, and identify the cost of the renewal</li>
+        <li> Subscriptions may be managed by the user and auto-renewal may be turned off by going to the user's Account Settings after purchase</li>
+        <li>Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable </li>
+      </ul>
+    </div>
+
+
+
+  <!-- <div class="row_btn">
+    <ion-row>
+      <ion-col>
+        <button ion-button="bar-button" (click)="consumProduct()" class="btn_round" round ion-button block>
+          <ion-icon name="ios-arrow-round-back-outline"></ion-icon>
+        </button>
+      </ion-col>
+      
+    </ion-row>
+  </div> -->
+ 
+
+
+</ion-content>

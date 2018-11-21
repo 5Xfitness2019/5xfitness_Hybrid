@@ -1,0 +1,49 @@
+<!--
+  Generated template for the CreateGoalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="title_main">
+
+    <ion-navbar>
+        <ion-title><img src="../../assets/imgs/logo.png" alt=""> Add Appointment</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg_main">
+
+    <ion-list class="form_main">
+        <br>
+        <br>
+
+        <ion-item>
+            <ion-input type="text" value="" placeholder="Subject*"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-textarea placeholder="Description"></ion-textarea>
+        </ion-item>
+
+        <ion-item class="date_picker">
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" placeholder="Date of Onset"></ion-datetime>
+        </ion-item>
+
+        <ion-item class="date_picker">
+            <ion-datetime displayFormat="h:mm A" [(ngModel)]="myDate" placeholder="Date of Onset"></ion-datetime>
+        </ion-item>
+
+        <ion-item class="select_label">
+            <ion-label *ngIf="!status" class="select_label">Repeat</ion-label>
+            <ion-select [(ngModel)]="status">
+                <ion-option value="f">Yes</ion-option>
+                <ion-option value="m">No</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <button class="btntheme" ion-button block>SAVE</button>
+
+    </ion-list>
+</ion-content>

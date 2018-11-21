@@ -1,0 +1,157 @@
+page-chatlist {
+
+    .segment {
+        background-color: $theme-bg;
+        .segment-button {
+            color: $white;
+            text-transform: none;
+            border: none;
+            &.segment-activated {
+                border-color: $themecolor;
+                background-color: transparent;
+                border-bottom: 3px solid $themecolor;
+            }
+        }
+    }
+    .btn_row {
+        text-align: center;
+        h4 {
+            color: $white;
+            @include font-size(2rem);
+        }
+        .button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            color: $white;
+            font-weight: bold;
+            overflow: inherit;
+            @include font-size(1.4rem);
+            position: relative;
+            &.bad {
+                background-color: #ef2131;
+                border: 6px solid #b81720;
+            }
+            &.good {
+                background-color: #61a73a;
+                border: 6px solid #569835;
+            }
+            ion-icon {
+                @include font-size(4rem);
+                position: absolute;
+                top: -3px;
+                right: 4px;
+                display: none;
+            }
+            &.checked {
+                ion-icon {
+                    display: block;
+                }
+            }
+        }
+    }
+    .rate {
+        background-color: transparent !important;
+        color: $white;
+        border-bottom: none;
+        .item-inner {
+            border-bottom: none !important;
+        }
+        &:last-child {
+            border-bottom: none !important;
+        }
+        .range-bar-active {
+            background: $themecolor;
+        }
+        .range-knob {
+            width: 28px !important;
+            height: 28px !important;
+            background: $white;
+            left: 7px;
+            top: 7px;
+        }
+    }
+    .btn_white {
+        background-color: #fff;
+        color: #424242;
+        height: 8vh;
+        font-weight: bold;
+    }
+    .work_list {
+        background-color: transparent;
+        border-color: #303030 !important;
+        padding-left: 0 !important;
+        border-bottom: 1px solid #303030;
+        padding: 10px 0;
+        .label {
+            color: $white;
+        }
+        .button {
+            height: 50px;
+            background-color: transparent;
+            &:hover {
+                background-color: transparent;
+            }
+            img {
+                width: 40px;
+            }
+        }
+        .item-inner {
+            padding-right: 0 !important;
+            border-bottom: none !important;
+            .btn_alam {
+                margin-right: 0;
+                padding-right: 0;
+            }
+            h6 {
+                color: $white;
+                @include font-size();
+                span {
+                    padding-left: 10px;
+                    position: relative;
+                    padding-right: 10px;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 6px;
+                        left: 0px;
+                        width: 5px;
+                        height: 5px;
+                        background-color: #6b6b6b;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            p {
+                color: $white;
+                ion-icon {
+                    color: #606060;
+                    &.active {
+                        color: $themecolor;
+                    }
+                }
+            }
+        }
+    }
+    .fab_add {
+        .fab {
+            background-color: $themecolor;
+            color: $white;
+        }
+    }
+    
+    
+
+.boun_gray{background-color: #353535;
+    border-radius: 80px;
+    font-size: 23px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    width: 54px;
+    height: 54px;}
+
+}
+.btn_num{width: 25px!important; height: 25px!important;  background-color: #e6a722!important; border-radius: 80px;   color: rgb(63, 63, 63); font-weight: 500; font-size: 15px !important;
+}
+.secnd{ color: #969696}

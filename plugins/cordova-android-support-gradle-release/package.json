@@ -1,0 +1,79 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-android-support-gradle-release@1.4.5",
+        "scope": null,
+        "escapedName": "cordova-android-support-gradle-release",
+        "name": "cordova-android-support-gradle-release",
+        "rawSpec": "1.4.5",
+        "spec": "1.4.5",
+        "type": "version"
+      },
+      "D:\\ionic3\\5x\\5xfitness\\node_modules"
+    ]
+  ],
+  "_from": "cordova-android-support-gradle-release@1.4.5",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-android-support-gradle-release@1.4.5",
+  "_inCache": true,
+  "_location": "/cordova-android-support-gradle-release",
+  "_nodeVersion": "8.11.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-android-support-gradle-release_1.4.5_1539193508891_0.6748259034715107"
+  },
+  "_npmUser": {
+    "name": "davealden",
+    "email": "dave@workingedge.co.uk"
+  },
+  "_npmVersion": "5.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-android-support-gradle-release@1.4.5",
+    "scope": null,
+    "escapedName": "cordova-android-support-gradle-release",
+    "name": "cordova-android-support-gradle-release",
+    "rawSpec": "1.4.5",
+    "spec": "1.4.5",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-android-support-gradle-release/-/cordova-android-support-gradle-release-1.4.5.tgz",
+  "_shasum": "0beb6e7e81a29a0b9cdd9acbb7db1547b4a93226",
+  "_shrinkwrap": null,
+  "_spec": "cordova-android-support-gradle-release@1.4.5",
+  "_where": "D:\\ionic3\\5x\\5xfitness\\node_modules",
+  "author": {
+    "name": "Dave Alden"
+  },
+  "dependencies": {
+    "xml2js": "~0.4.19"
+  },
+  "description": "Cordova/Phonegap plugin to align various versions of the Android Support libraries specified by other plugins to a specific version",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-iIMq1Ps8s8nB4JGnQFseKZkko4csIdomPej7aMDn3Z7TzCvhGy83vn7KzN/WZNIhIp7o3NxgRRL9/CTpq8DdCQ==",
+    "shasum": "0beb6e7e81a29a0b9cdd9acbb7db1547b4a93226",
+    "tarball": "https://registry.npmjs.org/cordova-android-support-gradle-release/-/cordova-android-support-gradle-release-1.4.5.tgz",
+    "fileCount": 7,
+    "unpackedSize": 16167,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbvjqmCRA9TVsSAnZWagAAp6AP/3M/yBONqZkInj3X+5Pr\nyPzBynSXWWBsPHhlSc4M93+U3zlvGbRq6pj6AjbBAHWNVUKcCfyfMpdj2rlf\n9qkwHfvn0a27m89mqoqB0KpscZs/brc2FSDOXvBBy6VhnSv2QO7xtmdUJgT5\nooLE8WQr+eAMeCVrC5zkY6oNeg1eUPQ0ckwe9PRxMkaDnx6G1CiGRf433+UZ\nECGFo5mIAq+93lHwZorl0CYMx455wwHKnosHv3AfDTfH4cxHhSAJKP1bnJDb\nsQ/kyL0IdUfiZ6Rw28/vTUIJF5dMyXmkMZRTL5D4CoC5GXEgoxHHg6zLDp9j\nI3aR44ft5lGVtvA1NcbpjPDsCITnHHGIGd0Ms7eyYoVpy5ZBzQFMv89Y6Hd8\nTZ8kc1bPzjGVdJZOHyC51dpujbIA1+PlfSuP3hCyLZ+E0RIfAyRgKUCnZcN9\n0K+o1zRStI0pIq806B9DOsA+OQKv5cp4dlVEGHa3Q+4DRYG6jIipiyXwo8eq\noOj2j9ZpyxfCcdvCtn8cAchl7d/9IBYtfVnyNGNxLGAQrS7yGJTdx++QWKOy\nfUYF1/UQFubylsUf/SLNwK7YHr89XBQYIT0dn1zUocUBbwlXmtRicZndtYri\neV1R5cbCRoNbtkMNEBsRwuJPKIHVKlH4GEqVGUaXzze5RTrr69+2YBYNaH9k\npNWl\r\n=MHL+\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "gitHead": "94419e5d766af03b46f0c595c272e49fabb09bfc",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "davealden",
+      "email": "dave@workingedge.co.uk"
+    }
+  ],
+  "name": "cordova-android-support-gradle-release",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.4.5"
+}

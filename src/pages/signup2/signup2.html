@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Signup2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding class="bg_main">
+    <br>
+    <br>
+    <div class="boxheader" text-center>
+        <h4>COMPLETE PROFILE</h4>
+        <button ion-button round color="light" outline>Chief Complaint</button>
+    </div>
+    <br>
+    <ion-list class="form_main">
+
+        <ion-item class="inputudr">
+            <ion-input  (keyup)="next($event,a1,'')" type="text" value="" [(ngModel)]="complaint.major_complaint" placeholder="Major Complaint*"></ion-input>
+        </ion-item>
+        <span class="msgErr" *ngIf="errMsg && !complaint.major_complaint">Please enter your Major Complaint </span>
+        <ion-item class="date_picker">
+            <ion-datetime [(ngModel)]="complaint.date_of_onset"  displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" placeholder="Date of Onset"></ion-datetime>
+        </ion-item>
+        
+        <ion-item class="inputudr">
+            <ion-input  #a1 (keyup)="next($event,a2,'')" type="text" [(ngModel)]="complaint.prev_treatment" value="" placeholder="Previous Treatment"></ion-input>
+        </ion-item>
+        
+        <ion-item class="inputudr">
+            <ion-input  #a2 (keyup)="next($event,a3,'submit')" type="text" [(ngModel)]="complaint.other_complaints" value="" placeholder="Other Complaints"></ion-input>
+        </ion-item>
+        
+        <div class="row_btn">
+            <ion-row>
+                <ion-col>
+                    <button ion-button="bar-button" (click)="goBack()" class="btn_round" round ion-button block>
+                      <ion-icon name="ios-arrow-round-back-outline"></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <div class="pagination">
+                        1/7
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <button (click)="signup3()" class="btn_round" round ion-button block>
+                      <ion-icon name="ios-arrow-round-forward-outline"></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-list>
+</ion-content>

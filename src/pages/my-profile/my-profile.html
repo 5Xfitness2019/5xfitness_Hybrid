@@ -1,0 +1,41 @@
+<!--
+  Generated template for the EditProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="title_main">
+  <ion-navbar>
+      <!-- <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button> -->
+      <ion-title><img src="assets/imgs/logo.png" alt=""> MY PROFILE</ion-title>
+  </ion-navbar>
+
+</ion-header>
+  
+  
+  <ion-content padding class="page-edit-profile">
+      <img *ngIf="!userData.image" src="assets/imgs/profile_bg.jpg" class="pro_img">
+      <img *ngIf="userData.image" src="{{userData.image}}" class="pro_img">
+    
+    
+    <ion-card class="m_top">
+          
+            <ion-card-header >
+              <h1>{{userData.first_name}} {{userData.last_name}}</h1>
+            </ion-card-header>
+          
+            <ion-card-content>
+                <ion-list>
+                    <ion-item>
+                    <h2 style="margin-top: 10px;">ABOUT</h2>  <p class="para">{{userData.about}} </p>
+                    </ion-item></ion-list>
+  
+  
+                     
+            </ion-card-content>
+          
+          </ion-card>
+  </ion-content>
+  

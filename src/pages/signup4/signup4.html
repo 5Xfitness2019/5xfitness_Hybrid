@@ -1,0 +1,74 @@
+<!--
+  Generated template for the Signup4Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding class="bg_main">
+    <br>
+    <div class="boxheader" text-center>
+        <h4>COMPLETE PROFILE</h4>
+        <button ion-button disabled round color="light" outline>Your Medical History</button>
+    </div>
+    <br>
+    <ion-list class="form_main">
+
+        <ion-item class="select_label">
+            <ion-label *ngIf="!complaint.disease" class="select_label">Have you ever had any of the following disease?</ion-label>
+            <ion-select [(ngModel)]="complaint.diseases" multiple="true" cancelText="Cancel" okText="OK">
+                <ion-option value="diabetes">Diabetes</ion-option>
+                <ion-option value="Peripheral Vascular">Peripheral Vascular Disease</ion-option>
+                <ion-option value="Osteoporosis">Osteoporosis</ion-option>
+                <ion-option value="Blood Pressure">High Blood Pressure</ion-option>
+                <ion-option value="Anemia">Anemia</ion-option>
+                <ion-option value="Emotional Disorders">Emotional Disorders</ion-option>
+                <ion-option value="Stroke">Stroke</ion-option>
+                <ion-option value="Phlebis or Emboli">Phlebis or Emboli</ion-option>
+                <ion-option value="Easting Disorders">Easting Disorders</ion-option>
+                <ion-option value="Pulmonary Disease">Pulmonary Disease</ion-option>
+                <ion-option value="Cancer">Cancer</ion-option>
+                <ion-option value="Other">Other</ion-option>
+            </ion-select>
+        </ion-item>
+        <span class="msgErr" *ngIf="errMsg && !complaint.diseases">Please answer this </span>
+        <ion-item class="inputudr">
+            <ion-textarea [(ngModel)]="complaint.other_diseases" placeholder="If other, please specify"></ion-textarea>
+        </ion-item>
+        <div class="label_text">
+
+            <p>If you could improve anything about your health, what would be your goals?</p>
+        </div>
+
+        <ion-item class="inputudr">
+            <ion-input   (keyup)="next($event,a1,'')" [(ngModel)]="complaint.goal_1" type="text" value="" placeholder="1"></ion-input>
+        </ion-item>
+
+        <ion-item class="inputudr">
+            <ion-input  #a1 (keyup)="next($event,a2,'')" type="text" [(ngModel)]="complaint.goal_2" value="" placeholder="2"></ion-input>
+        </ion-item>
+
+        <ion-item class="inputudr">
+            <ion-input   #a2 (keyup)="next($event,a3,'submit')" type="text" [(ngModel)]="complaint.goal_3" value="" placeholder="3"></ion-input>
+        </ion-item>
+
+        <div class="row_btn">
+            <ion-row>
+                <ion-col>
+                    <button ion-button="bar-button" (click)="goBack()" class="btn_round" round ion-button block>
+                        <ion-icon name="ios-arrow-round-back-outline"></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <div class="pagination">
+                        5/7
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <button (click)="signup5()" class="btn_round" round ion-button block>
+                        <ion-icon name="ios-arrow-round-forward-outline"></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-list>
+</ion-content>

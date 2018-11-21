@@ -1,0 +1,71 @@
+page-alampage {
+    .back-button {
+        color: $white;
+    }
+    .back-button-text {
+        display: none;
+    }
+    .tongle_btn {
+        background-color: transparent;
+        border-bottom: none !important;
+        .item-inner {
+            border-bottom: none !important;
+            color: $white;
+            .toggle-checked {
+                .toggle-icon {
+                    background-color: $themecolor;
+                }
+            }
+        }
+    }
+
+
+
+    .item{
+    &.item-block{
+    .item-inner{
+        border-bottom: none!important
+    }
+    }
+    }
+
+    .datetime {
+        padding: 13px 0px 13px 0px;
+    }
+    .datetime-text{
+        font-size: 44px; color: #fff; font-weight: bolder;
+    }
+
+    .item{
+        &.item-md{
+            .checkbox-md {
+        position: static;
+        display: block;
+        margin: 9px 10px 9px 4px;
+    }
+}
+}
+.checkbox-md .checkbox-icon{border-color: #fff}
+.checkbox .checkbox-checked {
+    border-color: #eeae24;
+    background-color: #eeae24;
+}
+.alam{
+    background-color: #fff;
+    width: 32px;
+    padding: 16px 0px !important;
+    color: #2d2d2d;
+}
+.alam_clear{
+    background-color: transparent;
+    width: 32px;
+    padding: 16px 0px !important;
+    color: #fff;
+}
+.lbl{white-space: initial!important; font-size: 12px!important; background: transparent!important; }
+.btnteme{color: #fff;
+    background-color: #eeae24;
+    -webkit-box-shadow: none;
+    box-shadow: none;}
+
+}

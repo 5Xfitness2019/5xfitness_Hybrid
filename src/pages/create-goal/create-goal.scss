@@ -1,0 +1,15 @@
+page-create-goal {
+    .back-button {
+        color: $white;
+    }
+    .text-input {
+        text-align: left !important;
+        padding-left: 15px !important;
+    }
+    .back-button-text {
+        display: none;
+    }
+    text-input .text-input-md{
+        height: 150px !important;
+    }
+}

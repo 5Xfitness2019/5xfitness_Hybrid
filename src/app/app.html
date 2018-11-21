@@ -1,0 +1,31 @@
+<ion-menu [content]="content" [swipeEnabled]="false">
+
+
+  <ion-content class="inner_bg cus_stylemain">
+
+      <ion-item class="card_style">
+          
+  <ion-list class="lst_class">
+    
+      <img *ngIf="!userData.profile_image" class="inf_side" src="assets/imgs/profile_bg.jpg">
+      <img *ngIf="userData.profile_image" class="inf_side" src="{{userData.profile_image}}">
+
+              <!-- <img src="assets/imgs/dp.jpg" class="inf_side"> -->
+            </ion-list>
+            <h2>{{userData.first_name}} {{userData.last_name}}</h2>
+            <p class="p_style">{{userData.address}}</p>
+          
+          
+          </ion-item>
+
+    <ion-list  class="cus_style">
+      <button menuClose  ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon name="{{p.icon}}"></ion-icon>  {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

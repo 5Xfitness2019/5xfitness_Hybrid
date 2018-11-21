@@ -1,0 +1,186 @@
+<ion-header class="title_main">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <img src="assets/imgs/logo.png" alt=""> {{userdetails.first_name}} {{userdetails.last_name}}</ion-title>
+    </ion-navbar>
+    <ion-segment [(ngModel)]="user_home">
+        <ion-segment-button value="pain_chart">
+            Pain Chart
+        </ion-segment-button>
+        <ion-segment-button value="myworkout">
+            My Workout
+        </ion-segment-button>
+        <ion-segment-button class="my_gl" value="mygoal">
+            My Goal
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content padding class="inner_bg">
+    <div [ngSwitch]="user_home">
+        <ion-list *ngSwitchCase="'pain_chart'">
+
+            <h5>Select Date Range</h5>
+            <div class="main_blk">
+
+                <ion-col col-6>
+                    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dateRang.start_date" placeholder="From" class="bg_pick"
+                        (ionChange)="dateChange()"></ion-datetime>
+                </ion-col>
+
+                <ion-col col-6>
+                    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dateRang.end_date" placeholder="To" class="bg_pick"
+                        (ionChange)="dateChange()"></ion-datetime>
+                </ion-col>
+            </div>
+
+
+
+
+            <div style="display: block;">
+                <canvas baseChart [datasets]="lineChartData" width="100%" height="100" [labels]="lineChartLabels" [options]="lineChartOptions"
+                    [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+            </div>
+            <br>
+            <div class="btn_row" align-items-center>
+                <h4>How do you feel today?</h4>
+                <div class="btn_pos" style="margin-left: -20px;">
+                    <ion-icon style="z-index: 10;" name="ios-checkmark-circle" class="tik_btn_active" [ngClass]="{'tik_btn ' : rating.feel_today == 'bad'}"></ion-icon>
+                    <button (click)="changeFeelToday('bad')" ion-button class="bad" [ngClass]="{'checked' : rating.feel_today == 'bad'}" round>BAD
+
+                    </button>
+                </div>
+
+                <div class="btn_pos">
+                    <ion-icon style="z-index: 10;" name="ios-checkmark-circle" class="tik_btn_active" [ngClass]="{'tik_btn' : rating.feel_today == 'good'}"></ion-icon>
+                    <button (click)="changeFeelToday('good')" ion-button class="good" [ngClass]="{'checked' : rating.feel_today == 'good'}" round>GOOD
+
+                    </button>
+                </div>
+            </div>
+            <ion-item class="rate">
+                <ion-range range-has-pin pin="true" value="upper" min="1" max="10" [(ngModel)]="rating.rating">
+                    <ion-label range-left>1</ion-label>
+                    <ion-label range-right>10</ion-label>
+                </ion-range>
+            </ion-item>
+            <div padding>
+                <button ion-button class="btn_white" block (click)="addTodaysRating()">SAVE</button>
+            </div>
+
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'myworkout'">
+            <!-- <ion-item class="work_list">
+                <ion-thumbnail item-start>
+                    <img src="assets/imgs/temp/thumb1.png">
+                </ion-thumbnail>
+                <h2>My Neighbor Totoro</h2>
+                <h6>
+                    <span>Rep:&nbsp; 2</span>
+                    <span>Hold:&nbsp; 3</span>
+                    <span>Set:&nbsp; 1</span>
+                </h6>
+                <p>Times Today
+                    <ion-icon class="active" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="active" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="active" name="checkmark-circle"></ion-icon>
+                    <ion-icon class="active" name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                </p>
+                <button ion-button (click)="alampage()" class="btn_alam" clear item-end>
+                    <img src="assets/imgs/icon-alam.png" alt="">
+                </button>
+            </ion-item> -->
+
+
+            <h3 style="text-align: center;padding-top:50%; color: #fff;" *ngIf="!myWorkOut.length">No workouts assigned yet</h3>
+
+            <ion-item class="work_list" *ngFor="let workOut of myWorkOut;let i = index">
+                <ion-grid>
+                    <ion-row>
+                        <div class="r_div">
+                            <ion-col col-5 style="float: left;">
+
+                                <img src="{{workOut.image}}" style="float: left;width:80px; margin-right: 10px">
+
+                            </ion-col>
+                            <ion-col col-6 (click)="myWorkOutDetails(workOut.assigned_id ,i)" style="float: left;">
+                                <h2>{{workOut.workout_name}}</h2>
+                                <h6>
+                                    <span>Sets : {{workOut.duration}} times</span>
+                                    <br>
+                                    <span>Rest : {{workOut.rest}} min</span> <span *ngIf="workOut.rest_sec">{{workOut.rest_sec}} sec </span>
+                                    <br>
+                                    <span>Reps: {{workOut.repeat_times}} times</span>
+                                    <br>
+                                    <span>Weight: {{workOut.weight}} lbs</span>
+                                    <br>
+                                </h6>
+                                <p>Times Today
+                                    <span class="progred">{{workOut.count}}/{{workOut.repeat_times}}</span>
+                                </p>
+
+
+                            </ion-col>
+                        </div>
+                        <ion-col col-3>
+                            <button ion-button (click)="alamPageMyGoals(workOut.assigned_id ,workOut.workout_name)" class="btn_alam" clear item-end style="float: right;">
+                                <img src="assets/imgs/icon-alam.png" alt="">
+                            </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+            </ion-item>
+
+
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'mygoal'">
+            <h3 style="text-align: center;padding-top:50%; color: #fff;" *ngIf="!myGoals.length">No goals added yet</h3>
+            <ion-item-sliding class="work_list" #item *ngFor="let goals of myGoals ; let i = index">
+
+                <ion-item class="work_list">
+
+
+                    <ion-grid>
+                        <ion-row>
+                            <div class="r_div">
+                                <ion-col col-3>
+                                    <ion-avatar item-start style="float: left; margin: 17px 17px 0px 0px;">
+                                        <img src="assets/imgs/icon_goal.png">
+                                    </ion-avatar>
+                                </ion-col>
+                                <ion-col col-6 (click)="MyGoalDetailsPage(goals.goal_id ,i)">
+                                    <h2>{{goals.title}}</h2>
+                                    <h5>{{goals.description}}</h5>
+                                </ion-col>
+                            </div>
+                            <ion-col col-3>
+                                <button ion-button class="btn_alam" clear item-end style="float: right;">
+                                    <img src="assets/imgs/icon-alam.png" alt="" (click)="alampage(goals.goal_id ,goals.title)">
+                                </button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-item>
+
+                <ion-item-options side="right">
+                    <button ion-button (click)="deleteMyGoal(goals.goal_id , i)">
+                        <ion-icon name="trash"></ion-icon>
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+    </div>
+    <ion-fab right bottom class="fab_add" *ngIf="user_home=='mygoal'">
+        <button ion-fab (click)="creategoal()" color="light">
+            <ion-icon name="md-add"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>

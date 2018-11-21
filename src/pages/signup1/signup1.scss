@@ -1,0 +1,65 @@
+page-signup1 {
+    .toolbar-background {
+        background-color: transparent;
+        .toolbar-title {
+            color: $white;
+        }
+    }
+    .back-button {
+        color: $white;
+    }
+    .boxheader {
+        h4 {
+            color: $white;
+        }
+        .button {
+            border-color: $themecolor;
+            font-weight: bold;
+            min-width: 200px;
+            opacity: 1 !important;
+            color: $white;
+            text-transform: none;
+            font-weight: normal;
+        }
+    }
+    .text-input {
+        text-align: left !important;
+        padding-left: 15px !important;
+    }
+    .datetime {
+        padding: 16px 15px !important;
+    }
+    .select {
+        padding-right: 6px !important;
+        max-width: inherit !important;
+        width: 100%;
+        padding: 0;
+        &.ng-untouched {
+            width: inherit !important;
+        }
+    }
+    .row_btn {
+        align-items: center;
+        .button {
+            margin: 0 auto;
+        }
+    }
+}
+
+.pagination {
+    background-color: #2f2f2f;
+    width: 100px;
+    height: 40px;
+    @include border-radius(40px);
+    text-align: center;
+    color: $white;
+    @include font-size(1.8rem);
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 3.8rem;
+}
+
+.pdleft {
+    padding-left: 10px !important;
+}

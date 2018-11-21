@@ -1,0 +1,38 @@
+<ion-header class="title_main">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <img src="assets/imgs/logo.png" alt="">
+        </ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content #content padding class="inner_bg">
+
+
+
+
+    <ion-list *ngIf="mediaArray.type == 'image'">
+        <img   [src]="DomSanitizer.bypassSecurityTrustUrl(mediaArray.media_url)">
+    </ion-list>
+    <ion-list *ngIf="mediaArray.type == 'video'">
+        <img src="{{mediaArray.thumb_nail}}">
+    </ion-list>
+
+
+
+
+
+
+    <ion-footer keyboard-attach="" class="bar-stable item-input-inset bar bar-footer">
+        <label class="item-input-wrapper">
+            <input placeholder="Type your message" [(ngModel)]="mediaArray.message" type="text" class="msg_input">
+        </label>
+
+        <button class="button button-clear btn_snd" (click)="sendMediaMessage()">
+            <ion-icon name="ios-send"></ion-icon>
+        </button>
+    </ion-footer>

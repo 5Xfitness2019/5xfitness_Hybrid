@@ -1,0 +1,36 @@
+<!--
+  Generated template for the CreateGoalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="title_main">
+
+    <ion-navbar>
+        <ion-title>
+            <img src="assets/imgs/logo.png"  alt=""> Add Goal</ion-title>
+       
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg_main">
+
+    <ion-list class="form_main">
+        <br>
+        <br>
+
+        <ion-item>
+            <ion-input type="text" [(ngModel)]="goal.title" value="" placeholder="Title*"></ion-input>
+        </ion-item>
+        <span class="msgErr" *ngIf="errMsg && !goal.title">Please enter Title</span>
+        <ion-item>
+            <ion-textarea rows="4" [(ngModel)]="goal.description" placeholder="Description"></ion-textarea>
+        </ion-item>
+        <!-- <span class="msgErr" *ngIf="errMsg && !goal.description">Please enter Description</span> -->
+        <button class="btntheme" ion-button block *ngIf="!goal.goal_id" (click)="addGoal()">SAVE</button>
+        <button class="btntheme" ion-button block *ngIf="goal.goal_id" (click)="addGoal()">Edit</button>
+
+    </ion-list>
+</ion-content>

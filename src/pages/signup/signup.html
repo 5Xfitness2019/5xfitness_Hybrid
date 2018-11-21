@@ -1,0 +1,61 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg_main">
+    <ion-list class="logo_login">
+        <img src="assets/imgs/logo.png" alt="">
+    </ion-list>
+    <h2 class="label_header">
+        Welcome!<br>
+        <span>Sign Up to continue</span>
+    </h2>
+    <ion-list padding class="form_main">
+
+        <ion-item class="inputudr">
+            <ion-input (keyup)="next($event,a1,'')" type="text" [(ngModel)]="userData.first_name" value="" placeholder="First Name*"></ion-input>
+        </ion-item>
+        <span class="msgErr" *ngIf="errMsg && !userData.first_name">Please enter your First Name </span>
+        <ion-item class="inputudr">
+            <ion-input #a1 (keyup)="next($event,a2,'')" type="text" [(ngModel)]="userData.last_name" value="" placeholder="Last Name*"></ion-input>
+        </ion-item>
+        <span class="msgErr" *ngIf="errMsg && !userData.last_name">Please enter your Last Name </span>
+        <ion-item class="inputudr">
+            <ion-input #a2 (keyup)="next($event,a3,'')" type="email" value="" [(ngModel)]="userData.email"  placeholder="Email*"></ion-input>
+        </ion-item>
+        <span class="msgErr" *ngIf="(errMsg && !userData.email) || errEmailMsg">Please enter your valid Email </span>
+        <ion-item class="inputudr">
+            <ion-input #a3 (keyup)="next($event,a4,'')" type="password" value="" [(ngModel)]="userData.password" placeholder="Password*"></ion-input>
+        </ion-item>
+        <span class="msgErr" *ngIf="errMsg && !userData.password">Please enter your Password </span>
+        <ion-item class="inputudr">
+            <ion-input #a4 (keyup)="next($event,a5,'submit')" type="password" [(ngModel)]="userData.cnfmPassword" value="" placeholder="Confirm Password*"></ion-input>
+            
+        </ion-item>
+        <span class="msgErr" *ngIf="errMsg && ( userData.cnfmPassword != userData.password)">Password and confirm password do not match</span>
+
+
+        
+
+        <button (click)="userSignUp()" class="btntheme" ion-button block>SIGNUP</button>
+
+        
+            
+            <h2 class="forgotpass" text-right>
+                    <!-- <ion-checkbox [(ngModel)]="terms"   checked="true"></ion-checkbox> -->
+                <a href="#">By signing up you to <b (click)="ComingsoonPage()">our Terms & Privacy policy</b></a>
+            </h2>
+          
+        
+        <br>
+
+    </ion-list>
+</ion-content>
